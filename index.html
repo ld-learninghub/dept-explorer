@@ -31,7 +31,7 @@
 .nav-btn{color:#17212b;background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(180,204,222,.5));border:1px solid rgba(255,255,255,.45);border-radius:50%;width:clamp(27px,2.5vw,34px);height:clamp(27px,2.5vw,34px);display:flex;align-items:center;justify-content:center;cursor:pointer;line-height:1;padding:0;transition:background .2s ease,transform .2s ease;flex-shrink:0} .nav-btn:hover{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(170,197,218,.68));transform:scale(1.03)} .nav-btn:disabled{opacity:.35;cursor:default;transform:none} .nav-btn svg{width:66%;height:66%} .nav-btn path{fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
 .debug-readout{position:absolute;left:1%;bottom:1%;z-index:50;background:rgba(20,20,20,.84);color:#fff;font-size:12px;font-family:Consolas,monospace;padding:.45em .65em;border-radius:6px;pointer-events:none;display:none} .debug-copy{position:absolute;left:1%;bottom:calc(1% + 34px);z-index:51;background:rgba(20,20,20,.86);color:#fff;border:1px solid rgba(255,255,255,.25);font-size:12px;font-family:Consolas,monospace;padding:.45em .65em;border-radius:6px;cursor:pointer;display:none} .debug-on .debug-readout,.debug-on .debug-copy{display:block} .debug-dot{position:absolute;width:10px;height:10px;margin-left:-5px;margin-top:-5px;border-radius:50%;background:#ff2b2b;border:2px solid #fff;box-shadow:0 0 0 2px rgba(0,0,0,.35);z-index:49;pointer-events:none;display:none} .debug-on .debug-dot{display:block}
 </style></head>
-<body><div class="app"><div class="stage"><div class="scene" id="scene"><img class="bg-img" src="https://ld-learninghub.github.io/department-explorer/background.png" alt="Interactive office floor with department rooms"><svg class="zone-svg" id="zone-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><div class="markers" id="markers"></div><div class="banners" id="banners"></div><div class="panel" id="panel"><button class="mute-btn" id="mute-btn" title="Mute audio" aria-label="Mute audio"></button><div class="panel-header"><div class="panel-eyebrow" id="panel-eyebrow"></div><div class="panel-title" id="panel-title"></div></div><div class="panel-body"><img class="panel-logo" id="panel-logo" src="https://ld-learninghub.github.io/department-explorer/logo.png" alt="Kryterion logo"><div class="panel-desc" id="panel-desc"></div></div><div class="panel-playall"><button class="nav-btn" id="prev-btn" title="Previous" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="playall-btn" id="playall-btn">▶ Play All</button><button class="nav-btn" id="next-btn" title="Next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button></div></div><div class="debug-readout" id="debug-readout">Debug mode</div><button class="debug-copy" id="debug-copy" type="button">Copy coordinate code</button><div class="debug-dot" id="debug-dot"></div></div></div><audio id="narration-audio" preload="none"></audio></div>
+<body><div class="app"><div class="stage"><div class="scene" id="scene"><img class="bg-img" src="https://ld-learninghub.github.io/dept-explorer/background.png" alt="Interactive office floor with department rooms"><svg class="zone-svg" id="zone-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><div class="markers" id="markers"></div><div class="banners" id="banners"></div><div class="panel" id="panel"><button class="mute-btn" id="mute-btn" title="Mute audio" aria-label="Mute audio"></button><div class="panel-header"><div class="panel-eyebrow" id="panel-eyebrow"></div><div class="panel-title" id="panel-title"></div></div><div class="panel-body"><img class="panel-logo" id="panel-logo" src="https://ld-learninghub.github.io/dept-explorer/logo.png" alt="Kryterion logo"><div class="panel-desc" id="panel-desc"></div></div><div class="panel-playall"><button class="nav-btn" id="prev-btn" title="Previous" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="playall-btn" id="playall-btn">▶ Play All</button><button class="nav-btn" id="next-btn" title="Next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button></div></div><div class="debug-readout" id="debug-readout">Debug mode</div><button class="debug-copy" id="debug-copy" type="button">Copy coordinate code</button><div class="debug-dot" id="debug-dot"></div></div></div><audio id="narration-audio" preload="none"></audio></div>
 <script>
 const DEBUG_MODE=false;// REVEAL_RADIUS_BUMP_20260617
 const GROUP_COLORS={"client":"#c85d5d","platform":"#4e8ec7","candidate":"#7b5bc4","employee":"#5e9b58"};
@@ -48,7 +48,7 @@ const DEPARTMENTS=[
     "ry": 10.55,
     "labelX": 13.8,
     "labelY": 12.9,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Marketing.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Marketing.mp3",
     "description": "Marketing shapes how Kryterion is presented to the market.\n\nThe team develops branding, creates content, and produces the materials used across campaigns, events, and client communications.\n\nMarketing also works closely with Sales by providing case studies, presentations, and other resources that support business development efforts.",
     "shape": "ellipse"
   },
@@ -62,7 +62,7 @@ const DEPARTMENTS=[
     "ry": 11.04,
     "labelX": 13.4,
     "labelY": 26.4,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Sales.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Sales.mp3",
     "description": "Sales is responsible for growing Kryterion's business.\n\nThe team builds relationships with prospective clients, manages opportunities, and helps organizations evaluate Kryterion's solutions.\n\nThey are often the first point of contact for companies exploring testing and credentialing programs.",
     "shape": "ellipse"
   },
@@ -76,7 +76,7 @@ const DEPARTMENTS=[
     "ry": 11.04,
     "labelX": 13.0,
     "labelY": 40.1,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/CX.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/CX.mp3",
     "description": "Customer Experience manages client relationships after a contract is signed.\n\nThe team guides implementations, supports ongoing program needs, and helps clients achieve their goals over time.\n\nThey serve as a primary point of contact throughout the life of a client program.",
     "shape": "ellipse"
   },
@@ -90,7 +90,7 @@ const DEPARTMENTS=[
     "ry": 10.80,
     "labelX": 12.6,
     "labelY": 54.1,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Psychometrics.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Psychometrics.mp3",
     "description": "Psychometric Services helps clients develop exams that are valid, reliable, and legally defensible.\n\nThe team supports every stage of exam development, including job analysis, item writing, statistical review, and standard setting.\n\nClients work directly with their psychometrician throughout the process.",
     "shape": "ellipse"
   },
@@ -106,7 +106,7 @@ const DEPARTMENTS=[
     "hitRy": 10.8,
     "labelX": 38.8,
     "labelY": 22.6,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Product.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Product.mp3",
     "description": "Product is responsible for the direction of Webassessor.\n\nThe team gathers feedback from clients and internal stakeholders, identifies opportunities for improvement, and manages the product roadmap.\n\nThey help determine which features and enhancements are developed in future releases.",
     "shape": "ellipse"
   },
@@ -122,7 +122,7 @@ const DEPARTMENTS=[
     "hitRy": 10.8,
     "labelX": 56.4,
     "labelY": 22.7,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Engineering.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Engineering.mp3",
     "description": "Engineering builds and maintains Webassessor and other core platforms used across Kryterion's services.\n\nThe team develops new functionality, resolves technical issues, and helps ensure the platform remains reliable and scalable.\n\nTheir work supports clients and candidates around the world.",
     "shape": "ellipse"
   },
@@ -136,7 +136,7 @@ const DEPARTMENTS=[
     "ry": 11.78,
     "labelX": 38.8,
     "labelY": 39.1,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/IT.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/IT.mp3",
     "description": "Information Technology supports the systems and infrastructure that keep Kryterion operating.\n\nThe team manages internal technology, supports integrations, and helps resolve technical issues across the organization.\n\nThey also assist clients and partners with platform connectivity and API-related questions.",
     "shape": "ellipse"
   },
@@ -154,7 +154,7 @@ const DEPARTMENTS=[
     "hitRy": 9.6,
     "labelX": 56.6,
     "labelY": 39.1,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/Info%20Sec.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Info%20Sec.mp3",
     "description": "Information Security protects Kryterion's systems, data, and technology assets.\n\nThe team oversees security governance, supports compliance initiatives such as SOC 2, and manages security reviews requested by clients.\n\nTheir work helps maintain trust across every aspect of the business.",
     "shape": "ellipse"
   },
@@ -168,7 +168,7 @@ const DEPARTMENTS=[
     "ry": 19.64,
     "labelX": 21.3,
     "labelY": 81.9,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/TDS.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/TDS.mp3",
     "description": "Test Delivery Services, or TDS, is responsible for delivering exams to candidates.\n\nThe team manages online proctoring, testing center operations, and candidate support services.\n\nTheir work helps ensure testing programs run smoothly from scheduling through exam completion.",
     "shape": "ellipse"
   },
@@ -186,7 +186,7 @@ const DEPARTMENTS=[
     "hitRy": 13.2,
     "labelX": 50.6,
     "labelY": 80.7,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/HR.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/HR.mp3",
     "description": "Human Resources supports employees throughout their time at Kryterion.\n\nThe team manages onboarding, benefits, performance programs, and employee relations.\n\nHR also leads initiatives that help measure engagement and improve the overall employee experience.",
     "shape": "ellipse"
   },
@@ -200,7 +200,7 @@ const DEPARTMENTS=[
     "ry": 16.52,
     "labelX": 62.8,
     "labelY": 80.7,
-    "audio": "https://ld-learninghub.github.io/department-explorer/audio/L%26D.mp3",
+    "audio": "https://ld-learninghub.github.io/dept-explorer/audio/L%26D.mp3",
     "description": "Learning and Development supports employee growth through training, onboarding, and professional development programs.\n\nThe team creates learning resources, coordinates training initiatives, and helps employees build the knowledge and skills needed for success.\n\nThey also support company-wide learning events and organizational development efforts.",
     "shape": "ellipse"
   }
