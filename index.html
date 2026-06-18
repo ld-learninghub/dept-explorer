@@ -22,16 +22,17 @@
 .info-row.active .state-marker svg.speaker-icon path:nth-of-type(2){animation:speakerWave 1.05s ease-in-out infinite .18s;transform-origin:50% 50%}
 @keyframes speakerWave{0%,100%{opacity:.35;transform:scale(.96)}50%{opacity:1;transform:scale(1.08)}}
 .group-banner{position:absolute;transform:translateX(-50%);background:radial-gradient(ellipse at center,color-mix(in srgb,var(--bcolor) 72%,#eef4fb) 0%,color-mix(in srgb,var(--bcolor) 64%,#07101a) 46%,color-mix(in srgb,var(--bcolor) 30%,#000000) 100%);color:#fff;font-weight:640;font-size:clamp(10.9px,1.06vw,17.7px);letter-spacing:.12em;text-transform:uppercase;padding:.42em 1em;border-radius:0;border:1.5px solid rgba(5,8,12,.9);box-shadow:0 5px 12px rgba(0,0,0,.40),inset 0 0 26px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.06);pointer-events:none;z-index:5;white-space:nowrap;text-align:center;line-height:1.12}
-.panel{position:absolute;background:radial-gradient(ellipse at center,rgba(247,251,254,.98) 0%,rgba(232,241,247,.96) 52%,rgba(132,155,176,.98) 100%),linear-gradient(90deg,rgba(22,35,48,.34) 0%,rgba(255,255,255,0) 18%,rgba(255,255,255,0) 82%,rgba(22,35,48,.34) 100%),linear-gradient(180deg,rgba(18,30,42,.24) 0%,rgba(255,255,255,0) 18%,rgba(255,255,255,0) 82%,rgba(18,30,42,.24) 100%);backdrop-filter:blur(4px);border:1px solid rgba(36,52,66,.48);border-radius:15px;padding:0;color:#1f2a34;line-height:1.55;display:flex;flex-direction:column;pointer-events:auto;cursor:auto;overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.16),inset 0 0 64px rgba(20,35,50,.24)}
-.panel-header{flex-shrink:0;padding:4.8% 5% 3.8%;background:linear-gradient(180deg,rgba(185,205,220,.88),rgba(154,178,197,.86));border-bottom:1px solid rgba(54,72,88,.28);box-shadow:0 3px 14px rgba(0,0,0,.12),inset 0 -18px 32px rgba(35,55,74,.08);position:relative}.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:5% 5% 3%;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(180deg,rgba(249,252,254,.90),rgba(236,244,249,.88))} .panel-body::-webkit-scrollbar{width:4px} .panel-body::-webkit-scrollbar-track{background:transparent} .panel-body::-webkit-scrollbar-thumb{background:rgba(72,90,108,.25);border-radius:4px}
-.panel-eyebrow{font-size:clamp(10px,1vw,13px);letter-spacing:.13em;text-transform:uppercase;color:var(--gcolor,#668aa4);font-weight:800;margin-bottom:.55em;min-height:1em}.panel-title{font-size:clamp(14.5px,1.42vw,20px);font-weight:650;color:#20272e;text-align:center;width:100%;margin:0;line-height:1.18;overflow-wrap:anywhere}.panel-desc{font-size:clamp(13.5px,1.35vw,16.6px);color:#263848;user-select:text;max-width:100%;overflow-wrap:break-word} .panel-desc p{margin:0 0 .78em 0} .panel-desc p:last-child{margin-bottom:0} .panel.default .panel-eyebrow{visibility:hidden}.panel.default .panel-desc{background:transparent;border:0;padding:0}
-.panel-logo{display:none;width:80%;align-self:center;padding:calc(.6em + 5px) 0 calc(.9em + 5px);object-fit:contain}.panel.default .panel-logo{display:block}
-.mute-btn{position:absolute;top:.55em;right:.55em;z-index:8;width:clamp(28px,2.7vw,36px);height:clamp(28px,2.7vw,36px);border-radius:50%;border:1.5px solid rgba(35,50,65,.42);background:rgba(255,255,255,.5);color:#17212b;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;line-height:1;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;box-shadow:0 2px 7px rgba(0,0,0,.16)} .mute-btn:hover{background:rgba(255,255,255,.78);transform:scale(1.04)} .mute-btn svg{width:62%;height:62%} .mute-btn path,.mute-btn polygon,.mute-btn line{stroke:#17212b;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round} .mute-btn polygon{fill:#17212b;stroke:none}
-.panel-playall{flex-shrink:0;padding:.6em .75em .7em;border-top:1px solid rgba(54,72,88,.28);display:flex;justify-content:center;align-items:center;gap:.42em;background:linear-gradient(180deg,rgba(185,205,220,.88),rgba(154,178,197,.86));box-shadow:inset 0 18px 32px rgba(255,255,255,.08)} .playall-btn{font-size:clamp(11px,1.1vw,13px);font-weight:700;color:#17212b;background:linear-gradient(135deg,rgba(255,255,255,.42),rgba(190,211,226,.42));border:1px solid rgba(255,255,255,.42);border-radius:999px;padding:.45em 1.1em;cursor:pointer;transition:background .2s ease} .playall-btn:hover,.playall-btn.is-playing{background:linear-gradient(135deg,rgba(255,255,255,.66),rgba(183,207,224,.62))}
-.nav-btn{color:#17212b;background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(180,204,222,.5));border:1px solid rgba(255,255,255,.45);border-radius:50%;width:clamp(27px,2.5vw,34px);height:clamp(27px,2.5vw,34px);display:flex;align-items:center;justify-content:center;cursor:pointer;line-height:1;padding:0;transition:background .2s ease,transform .2s ease;flex-shrink:0} .nav-btn:hover{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(170,197,218,.68));transform:scale(1.03)} .nav-btn:disabled{opacity:.35;cursor:default;transform:none} .nav-btn svg{width:66%;height:66%} .nav-btn path{fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
+.panel{position:absolute;background:linear-gradient(180deg,rgba(245,238,226,.86),rgba(236,226,210,.80));backdrop-filter:blur(8px) saturate(112%);-webkit-backdrop-filter:blur(8px) saturate(112%);border:1px solid rgba(255,255,255,.58);border-radius:16px;padding:0;color:#142336;line-height:1.52;display:flex;flex-direction:column;pointer-events:auto;cursor:auto;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.34),0 0 0 1px rgba(70,52,35,.16);--panel-accent:#5e9b58;container-type:inline-size}
+.panel-header{flex-shrink:0;min-height:16.8%;padding:calc(12px + 3.4%) 12% 3.6%;background:linear-gradient(180deg,rgba(236,227,213,.92),rgba(222,211,195,.86));border-bottom:1px solid rgba(95,76,55,.22);box-shadow:0 2px 10px rgba(0,0,0,.07);position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center}.panel-header::before{content:"";position:absolute;left:0;right:0;top:0;height:13px;background:var(--panel-accent);box-shadow:inset 0 -1px 0 rgba(0,0,0,.08)}
+.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:6% 6.2% 4.5%;display:flex;flex-direction:column;align-items:flex-start;background:rgba(246,240,230,.58)} .panel-body::-webkit-scrollbar{width:4px} .panel-body::-webkit-scrollbar-track{background:transparent} .panel-body::-webkit-scrollbar-thumb{background:rgba(90,74,55,.34);border-radius:4px}
+.panel-eyebrow{display:none}.panel-title{font-size:clamp(16px,1.58vw,22px);font-weight:760;color:#13253a;text-align:center;width:100%;margin:0;line-height:1.14;overflow-wrap:anywhere;word-break:normal}.panel.default .panel-title{color:#13253a;background:none;-webkit-background-clip:initial;background-clip:initial;text-shadow:none}.panel-desc{font-size:clamp(14.2px,1.42vw,18px);color:#182636;user-select:text;max-width:100%;overflow-wrap:break-word} .panel-desc p{margin:0 0 .86em 0} .panel-desc p:last-child{margin-bottom:0}.panel.default .panel-desc{background:transparent;border:0;padding:0;text-align:left;width:100%}
+.panel-logo{display:none;width:76%;align-self:center;margin:.2em auto 1.15em;padding:0;object-fit:contain}.panel.default .panel-logo{display:block}
+.mute-btn{position:absolute;top:.58em;right:.58em;z-index:8;width:clamp(28px,2.6vw,35px);height:clamp(28px,2.6vw,35px);border-radius:50%;border:1.4px solid rgba(72,58,42,.28);background:rgba(255,255,255,.38);color:#17212b;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;line-height:1;transition:background .2s ease,transform .2s ease,box-shadow .2s ease;box-shadow:0 2px 6px rgba(0,0,0,.12)} .mute-btn:hover{background:rgba(255,255,255,.72);transform:scale(1.04)} .mute-btn svg{width:62%;height:62%} .mute-btn path,.mute-btn polygon,.mute-btn line{stroke:#17212b;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round} .mute-btn polygon{fill:#17212b;stroke:none}
+.panel-playall{flex-shrink:0;padding:.72em .68em .78em;border-top:1px solid rgba(95,76,55,.22);display:grid;grid-template-columns:auto minmax(0,1fr) auto;justify-items:center;align-items:center;gap:.48em;background:linear-gradient(180deg,rgba(222,211,195,.86),rgba(232,223,208,.92));box-shadow:inset 0 1px 0 rgba(255,255,255,.34)} .playall-btn{font-size:clamp(11.4px,1.05vw,13.6px);font-weight:760;color:#142336;background:rgba(255,255,255,.72);border:1px solid rgba(70,52,35,.22);border-radius:999px;max-width:100%;min-width:0;min-height:clamp(40px,3.7vw,50px);padding:.32em .70em;cursor:pointer;transition:background .2s ease,border-color .2s ease;line-height:1.05;display:flex;align-items:center;justify-content:center;gap:.48em;text-align:center;white-space:normal;box-shadow:0 2px 7px rgba(0,0,0,.10),inset 0 1px 0 rgba(255,255,255,.55)}.playall-btn::before{content:"▶";width:clamp(29px,2.8vw,38px);height:clamp(29px,2.8vw,38px);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);border:1px solid rgba(20,35,54,.30);color:#142336;box-shadow:0 2px 5px rgba(0,0,0,.14);font-size:.88em;flex:0 0 auto}.playall-btn:hover{background:rgba(255,255,255,.88);border-color:rgba(70,52,35,.34)}.playall-btn.is-playing::before{content:"❚❚"}.playall-btn.is-playing{background:rgba(255,255,255,.82);color:#142336}.playall-text{display:block;flex:1 1 auto;min-width:0;max-width:4.35em;overflow:visible;text-overflow:clip;white-space:normal;line-height:1.02;text-align:center}.playall-btn{max-width:8.2em}@container (max-width:145px){.playall-btn{padding:.24em}.playall-text{display:none}.panel-playall{gap:.34em;padding-left:.48em;padding-right:.48em}}
+.nav-btn{color:#142336;background:rgba(255,255,255,.30);border:1px solid rgba(70,52,35,.28);border-radius:50%;width:clamp(31px,3vw,42px);height:clamp(31px,3vw,42px);display:flex;align-items:center;justify-content:center;cursor:pointer;line-height:1;padding:0;transition:background .2s ease,transform .2s ease,border-color .2s ease;flex-shrink:0} .nav-btn:hover{background:rgba(255,255,255,.58);border-color:color-mix(in srgb,var(--panel-accent) 60%,rgba(70,52,35,.28));transform:scale(1.04)} .nav-btn:disabled{opacity:.34;cursor:default;transform:none} .nav-btn svg{width:66%;height:66%} .nav-btn path{fill:none;stroke:currentColor;stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round}
 .debug-readout{position:absolute;left:1%;bottom:1%;z-index:50;background:rgba(20,20,20,.84);color:#fff;font-size:12px;font-family:Consolas,monospace;padding:.45em .65em;border-radius:6px;pointer-events:none;display:none} .debug-copy{position:absolute;left:1%;bottom:calc(1% + 34px);z-index:51;background:rgba(20,20,20,.86);color:#fff;border:1px solid rgba(255,255,255,.25);font-size:12px;font-family:Consolas,monospace;padding:.45em .65em;border-radius:6px;cursor:pointer;display:none} .debug-on .debug-readout,.debug-on .debug-copy{display:block} .debug-dot{position:absolute;width:10px;height:10px;margin-left:-5px;margin-top:-5px;border-radius:50%;background:#ff2b2b;border:2px solid #fff;box-shadow:0 0 0 2px rgba(0,0,0,.35);z-index:49;pointer-events:none;display:none} .debug-on .debug-dot{display:block}
 </style></head>
-<body><div class="app"><div class="stage"><div class="scene" id="scene"><img class="bg-img" src="https://ld-learninghub.github.io/dept-explorer/background.png" alt="Interactive office floor with department rooms"><svg class="zone-svg" id="zone-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><div class="markers" id="markers"></div><div class="banners" id="banners"></div><div class="panel" id="panel"><button class="mute-btn" id="mute-btn" title="Mute audio" aria-label="Mute audio"></button><div class="panel-header"><div class="panel-eyebrow" id="panel-eyebrow"></div><div class="panel-title" id="panel-title"></div></div><div class="panel-body"><img class="panel-logo" id="panel-logo" src="https://ld-learninghub.github.io/dept-explorer/logo.png" alt="Kryterion logo"><div class="panel-desc" id="panel-desc"></div></div><div class="panel-playall"><button class="nav-btn" id="prev-btn" title="Previous" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="playall-btn" id="playall-btn">▶ Play All</button><button class="nav-btn" id="next-btn" title="Next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button></div></div><div class="debug-readout" id="debug-readout">Debug mode</div><button class="debug-copy" id="debug-copy" type="button">Copy coordinate code</button><div class="debug-dot" id="debug-dot"></div></div></div><audio id="narration-audio" preload="none"></audio></div>
+<body><div class="app"><div class="stage"><div class="scene" id="scene"><img class="bg-img" src=https://ld-learninghub.github.io/dept-explorer/background.png" alt="Interactive office floor with department rooms"><svg class="zone-svg" id="zone-svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><div class="markers" id="markers"></div><div class="banners" id="banners"></div><div class="panel" id="panel"><button class="mute-btn" id="mute-btn" title="Mute audio" aria-label="Mute audio"></button><div class="panel-header"><div class="panel-eyebrow" id="panel-eyebrow"></div><div class="panel-title" id="panel-title"></div></div><div class="panel-body"><img class="panel-logo" id="panel-logo" src="https://ld-learninghub.github.io/dept-explorer/logo.png" alt="Kryterion logo"><div class="panel-desc" id="panel-desc"></div></div><div class="panel-playall"><button class="nav-btn" id="prev-btn" title="Previous" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button><button class="playall-btn" id="playall-btn"><span class="playall-text">Start Tour</span></button><button class="nav-btn" id="next-btn" title="Next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button></div></div><div class="debug-readout" id="debug-readout">Debug mode</div><button class="debug-copy" id="debug-copy" type="button">Copy coordinate code</button><div class="debug-dot" id="debug-dot"></div></div></div><audio id="narration-audio" preload="none"></audio></div>
 <script>
 const DEBUG_MODE=false;// REVEAL_RADIUS_BUMP_20260617
 const GROUP_COLORS={"client":"#c85d5d","platform":"#4e8ec7","candidate":"#7b5bc4","employee":"#5e9b58"};
@@ -42,12 +43,12 @@ const DEPARTMENTS=[
     "id": "marketing",
     "label": "Marketing",
     "group": "client",
-    "cx": 13.5,
-    "cy": 12.9,
+    "cx": 48.8,
+    "cy": 12.0,
     "rx": 13.49,
     "ry": 10.55,
-    "labelX": 13.8,
-    "labelY": 12.9,
+    "labelX": 48.8,
+    "labelY": 12.0,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Marketing.mp3",
     "description": "Marketing shapes how Kryterion is presented to the market.\n\nThe team develops branding, creates content, and produces the materials used across campaigns, events, and client communications.\n\nMarketing also works closely with Sales by providing case studies, presentations, and other resources that support business development efforts.",
     "shape": "ellipse"
@@ -56,12 +57,12 @@ const DEPARTMENTS=[
     "id": "sales",
     "label": "Sales",
     "group": "client",
-    "cx": 13.5,
-    "cy": 26.4,
+    "cx": 48.8,
+    "cy": 25.8,
     "rx": 13.49,
     "ry": 11.04,
-    "labelX": 13.4,
-    "labelY": 26.4,
+    "labelX": 48.8,
+    "labelY": 25.8,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Sales.mp3",
     "description": "Sales is responsible for growing Kryterion's business.\n\nThe team builds relationships with prospective clients, manages opportunities, and helps organizations evaluate Kryterion's solutions.\n\nThey are often the first point of contact for companies exploring testing and credentialing programs.",
     "shape": "ellipse"
@@ -70,12 +71,12 @@ const DEPARTMENTS=[
     "id": "cx",
     "label": "CX",
     "group": "client",
-    "cx": 13.5,
-    "cy": 41.1,
+    "cx": 48.8,
+    "cy": 40.3,
     "rx": 13.49,
     "ry": 11.04,
-    "labelX": 13.0,
-    "labelY": 40.1,
+    "labelX": 48.8,
+    "labelY": 39.3,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/CX.mp3",
     "description": "Customer Experience manages client relationships after a contract is signed.\n\nThe team guides implementations, supports ongoing program needs, and helps clients achieve their goals over time.\n\nThey serve as a primary point of contact throughout the life of a client program.",
     "shape": "ellipse"
@@ -84,12 +85,12 @@ const DEPARTMENTS=[
     "id": "psychometrics",
     "label": "Psychometrics",
     "group": "client",
-    "cx": 13.5,
-    "cy": 55.1,
+    "cx": 48.8,
+    "cy": 54.5,
     "rx": 13.49,
-    "ry": 10.80,
-    "labelX": 12.6,
-    "labelY": 54.1,
+    "ry": 10.8,
+    "labelX": 49.3,
+    "labelY": 52.5,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Psychometrics.mp3",
     "description": "Psychometric Services helps clients develop exams that are valid, reliable, and legally defensible.\n\nThe team supports every stage of exam development, including job analysis, item writing, statistical review, and standard setting.\n\nClients work directly with their psychometrician throughout the process.",
     "shape": "ellipse"
@@ -98,14 +99,14 @@ const DEPARTMENTS=[
     "id": "product",
     "label": "Product",
     "group": "platform",
-    "cx": 38.8,
-    "cy": 21.6,
+    "cx": 72.5,
+    "cy": 21.4,
     "rx": 12.85,
     "ry": 14.23,
     "hitRx": 7.2,
     "hitRy": 10.8,
-    "labelX": 38.8,
-    "labelY": 22.6,
+    "labelX": 72.5,
+    "labelY": 22.4,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Product.mp3",
     "description": "Product is responsible for the direction of Webassessor.\n\nThe team gathers feedback from clients and internal stakeholders, identifies opportunities for improvement, and manages the product roadmap.\n\nThey help determine which features and enhancements are developed in future releases.",
     "shape": "ellipse"
@@ -114,14 +115,14 @@ const DEPARTMENTS=[
     "id": "engineering",
     "label": "Engineering",
     "group": "platform",
-    "cx": 56.4,
-    "cy": 21.7,
+    "cx": 88.1,
+    "cy": 21.4,
     "rx": 17.92,
     "ry": 14.23,
     "hitRx": 9.6,
     "hitRy": 10.8,
-    "labelX": 56.4,
-    "labelY": 22.7,
+    "labelX": 88.1,
+    "labelY": 22.4,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Engineering.mp3",
     "description": "Engineering builds and maintains Webassessor and other core platforms used across Kryterion's services.\n\nThe team develops new functionality, resolves technical issues, and helps ensure the platform remains reliable and scalable.\n\nTheir work supports clients and candidates around the world.",
     "shape": "ellipse"
@@ -130,12 +131,16 @@ const DEPARTMENTS=[
     "id": "it",
     "label": "IT",
     "group": "platform",
-    "cx": 38.8,
-    "cy": 40.1,
-    "rx": 12.85,
-    "ry": 11.78,
-    "labelX": 38.8,
-    "labelY": 39.1,
+    "cx": 72.5,
+    "cy": 40.0,
+    "rx": 8.2,
+    "ry": 10.8,
+    "hitCx": 72.5,
+    "hitCy": 40.0,
+    "hitRx": 7.2,
+    "hitRy": 10.0,
+    "labelX": 73.5,
+    "labelY": 39.0,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/IT.mp3",
     "description": "Information Technology supports the systems and infrastructure that keep Kryterion operating.\n\nThe team manages internal technology, supports integrations, and helps resolve technical issues across the organization.\n\nThey also assist clients and partners with platform connectivity and API-related questions.",
     "shape": "ellipse"
@@ -144,16 +149,16 @@ const DEPARTMENTS=[
     "id": "infosec",
     "label": "InfoSec",
     "group": "platform",
-    "cx": 56.6,
-    "cy": 40.1,
+    "cx": 88.1,
+    "cy": 40.0,
     "rx": 17.92,
     "ry": 11.78,
-    "hitCx": 57.9,
-    "hitCy": 40.1,
+    "hitCx": 88.4,
+    "hitCy": 40.0,
     "hitRx": 9.2,
     "hitRy": 9.6,
-    "labelX": 56.6,
-    "labelY": 39.1,
+    "labelX": 89.1,
+    "labelY": 39.0,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/Info%20Sec.mp3",
     "description": "Information Security protects Kryterion's systems, data, and technology assets.\n\nThe team oversees security governance, supports compliance initiatives such as SOC 2, and manages security reviews requested by clients.\n\nTheir work helps maintain trust across every aspect of the business.",
     "shape": "ellipse"
@@ -162,12 +167,12 @@ const DEPARTMENTS=[
     "id": "tds",
     "label": "TDS",
     "group": "candidate",
-    "cx": 21.3,
-    "cy": 80.9,
-    "rx": 23.40,
+    "cx": 50.8,
+    "cy": 80.6,
+    "rx": 23.4,
     "ry": 19.64,
-    "labelX": 21.3,
-    "labelY": 81.9,
+    "labelX": 50.8,
+    "labelY": 82.6,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/TDS.mp3",
     "description": "Test Delivery Services, or TDS, is responsible for delivering exams to candidates.\n\nThe team manages online proctoring, testing center operations, and candidate support services.\n\nTheir work helps ensure testing programs run smoothly from scheduling through exam completion.",
     "shape": "ellipse"
@@ -176,16 +181,16 @@ const DEPARTMENTS=[
     "id": "hr",
     "label": "HR",
     "group": "employee",
-    "cx": 50.6,
-    "cy": 78.7,
+    "cx": 77.3,
+    "cy": 79.4,
     "rx": 10.65,
     "ry": 16.52,
-    "hitCx": 49.6,
-    "hitCy": 78.7,
+    "hitCx": 77.0,
+    "hitCy": 79.4,
     "hitRx": 5.9,
     "hitRy": 13.2,
-    "labelX": 50.6,
-    "labelY": 80.7,
+    "labelX": 77.3,
+    "labelY": 82.4,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/HR.mp3",
     "description": "Human Resources supports employees throughout their time at Kryterion.\n\nThe team manages onboarding, benefits, performance programs, and employee relations.\n\nHR also leads initiatives that help measure engagement and improve the overall employee experience.",
     "shape": "ellipse"
@@ -194,16 +199,16 @@ const DEPARTMENTS=[
     "id": "ld",
     "label": "L&D",
     "group": "employee",
-    "cx": 62.8,
-    "cy": 78.7,
+    "cx": 90.4,
+    "cy": 79.4,
     "rx": 11.66,
     "ry": 16.52,
-    "hitCx": 64.0,
-    "hitCy": 78.7,
+    "hitCx": 90.7,
+    "hitCy": 79.4,
     "hitRx": 7.5,
     "hitRy": 13.2,
-    "labelX": 62.8,
-    "labelY": 80.7,
+    "labelX": 90.4,
+    "labelY": 82.4,
     "audio": "https://ld-learninghub.github.io/dept-explorer/audio/L%26D.mp3",
     "description": "Learning and Development supports employee growth through training, onboarding, and professional development programs.\n\nThe team creates learning resources, coordinates training initiatives, and helps employees build the knowledge and skills needed for success.\n\nThey also support company-wide learning events and organizational development efforts.",
     "shape": "ellipse"
@@ -212,22 +217,22 @@ const DEPARTMENTS=[
 const GROUP_BANNERS=[
   {
     "group": "client",
-    "left": "13.5%",
+    "left": "48.8%",
     "top": "2.2%"
   },
   {
     "group": "platform",
-    "left": "47.6%",
+    "left": "80.4%",
     "top": "2.2%"
   },
   {
     "group": "candidate",
-    "left": "21.3%",
+    "left": "50.8%",
     "top": "93.0%"
   },
   {
     "group": "employee",
-    "left": "56.7%",
+    "left": "83.8%",
     "top": "93.0%"
   }
 ];
@@ -235,32 +240,32 @@ const GROUP_AREAS=[
   {
     "group": "client",
     "shape": "ellipse",
-    "cx": 13.6,
-    "cy": 35.4,
+    "cx": 48.8,
+    "cy": 34.0,
     "rx": 18.2,
     "ry": 36.2
   },
   {
     "group": "platform",
     "shape": "ellipse",
-    "cx": 47.8,
-    "cy": 31.2,
+    "cx": 80.4,
+    "cy": 31.0,
     "rx": 26.6,
     "ry": 28.2
   },
   {
     "group": "candidate",
     "shape": "ellipse",
-    "cx": 20.5,
-    "cy": 82.5,
+    "cx": 50.8,
+    "cy": 82.0,
     "rx": 28.6,
     "ry": 22.2
   },
   {
     "group": "employee",
     "shape": "ellipse",
-    "cx": 56.8,
-    "cy": 82.4,
+    "cx": 83.8,
+    "cy": 82.0,
     "rx": 19.8,
     "ry": 21.4
   }
@@ -268,9 +273,9 @@ const GROUP_AREAS=[
 const GROUP_AREAS_COMPLETED_SCALE={rx:.94,ry:1.14};
 const GROUP_AREAS_ALL_COMPLETE_SCALE={rx:1.48,ry:1.40};
 const AUTOPLAY_GAP_MS=1000;
-const PANEL={left:"71.0%",top:"4.0%",width:"27.5%",height:"92.0%"};
+const PANEL={left:"2.0%",top:"4.0%",width:"31.5%",height:"92.0%"};
 const DEFAULT_TITLE="Department Explorer";
-const DEFAULT_DESC=["Select a department to hear a short overview of the team.","Use Play All or the arrows to move through the departments."];
+const DEFAULT_DESC=["Select any department to hear a short overview.","Start Tour will guide you through the departments."];
 const zoneSvg=document.getElementById('zone-svg'),markers=document.getElementById('markers'),banners=document.getElementById('banners'),scene=document.getElementById('scene'),panel=document.getElementById('panel'),audioEl=document.getElementById('narration-audio'),playAllBtn=document.getElementById('playall-btn'),prevBtn=document.getElementById('prev-btn'),nextBtn=document.getElementById('next-btn'),muteBtn=document.getElementById('mute-btn'),debugReadout=document.getElementById('debug-readout'),debugCopy=document.getElementById('debug-copy'),debugDot=document.getElementById('debug-dot');
 let activeDept=null,panelDept=null,playAllMode=false,muted=false,lastDebugCode=''; const completed=new Set(); panel.style.left=PANEL.left; panel.style.top=PANEL.top; panel.style.width=PANEL.width; panel.style.height=PANEL.height;
 function svgEl(name){return document.createElementNS('http://www.w3.org/2000/svg',name)}
@@ -283,9 +288,17 @@ function buildZones(){ensureDefs(); const mask=document.getElementById('dim-mask
 DEPARTMENTS.forEach(d=>{const g=svgEl('g');g.id='zone-'+d.id;g.setAttribute('class','zone');g.style.setProperty('--gcolor',GROUP_COLORS[d.group]);g.style.pointerEvents='auto';const grad=ensureGradient(d.group);const glow=ellipseShape(d,'zone-glow','url(#'+grad+')');const hit=hitEllipseShape(d,'zone-hit','transparent');g.appendChild(glow);g.appendChild(hit);zoneSvg.appendChild(g); const row=document.createElement('div');row.className='info-row';row.id='info-'+d.id;row.style.setProperty('--gcolor',GROUP_COLORS[d.group]);row.style.left=(d.labelX??d.cx)+'%';row.style.top=d.labelY+'%';const marker=document.createElement('div');marker.className='state-marker';marker.innerHTML='<svg class="speaker-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="4,10 8,10 13,6 13,18 8,14 4,14"></polygon><path d="M16 9.5c1.2 1.4 1.2 3.6 0 5"></path><path d="M18.5 7c2.3 2.7 2.3 7.3 0 10"></path></svg><svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg>';row.appendChild(marker);const label=document.createElement('div');label.className='label';label.textContent=d.label;row.appendChild(label);markers.appendChild(row); const enter=()=>{g.classList.add('hover');row.classList.add('hover');if(!g.classList.contains('active')&&!g.classList.contains('completed'))setMaskClass(d.id,'room','hover');}; const leave=()=>{g.classList.remove('hover');row.classList.remove('hover');if(!g.classList.contains('active')&&!g.classList.contains('completed'))setMaskClass(d.id,'room','');}; [g,row].forEach(el=>{el.addEventListener('mouseenter',enter);el.addEventListener('mouseleave',leave);el.addEventListener('click',e=>{if(DEBUG_MODE){e.preventDefault();e.stopPropagation();updateDebugPoint(e);return;}e.stopPropagation();onBuildingClick(d);});});}); GROUP_BANNERS.forEach(b=>{const el=document.createElement('div');el.className='group-banner';el.innerHTML=GROUP_LABELS[b.group];el.style.setProperty('--bcolor',GROUP_COLORS[b.group]);el.style.left=b.left;el.style.top=b.top;banners.appendChild(el);});}
 function escapeHTML(v){return String(v).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
 function renderDescription(desc){return (Array.isArray(desc)?desc:String(desc).split(/\n\s*\n/)).map(p=>String(p).trim()).filter(Boolean).map(p=>'<p>'+escapeHTML(p)+'</p>').join('');}
-function showDefaultPanel(){panelDept=null;panel.classList.add('default');document.getElementById('panel-eyebrow').textContent=' ';document.getElementById('panel-eyebrow').style.color='transparent';document.getElementById('panel-title').textContent=DEFAULT_TITLE;document.getElementById('panel-desc').innerHTML=renderDescription(DEFAULT_DESC);updateNavButtons();}
-function showPanel(d){panelDept=d;panel.classList.remove('default');document.getElementById('panel-eyebrow').textContent=GROUP_LABELS[d.group]||'';document.getElementById('panel-eyebrow').style.color=GROUP_COLORS[d.group];document.getElementById('panel-title').textContent=d.label;document.getElementById('panel-desc').innerHTML=renderDescription(d.description);updateNavButtons();}
+function showDefaultPanel(){panelDept=null;panel.classList.add('default');panel.style.setProperty('--panel-accent','#b8a98f');document.getElementById('panel-eyebrow').textContent='';document.getElementById('panel-title').textContent=DEFAULT_TITLE;document.getElementById('panel-desc').innerHTML=renderDescription(DEFAULT_DESC);updateNavButtons();}
+function showPanel(d){panelDept=d;panel.classList.remove('default');panel.style.setProperty('--panel-accent',GROUP_COLORS[d.group]||'#5e9b58');document.getElementById('panel-eyebrow').textContent='';document.getElementById('panel-title').textContent=d.label;document.getElementById('panel-desc').innerHTML=renderDescription(d.description);updateNavButtons();}
 function deptIndex(d){return DEPARTMENTS.findIndex(x=>x.id===(d&&d.id));}
+function nextIncompleteAfter(d){
+  const startIndex=deptIndex(d);
+  for(let i=startIndex+1;i<DEPARTMENTS.length;i++){
+    if(!completed.has(DEPARTMENTS[i].id))return DEPARTMENTS[i];
+  }
+  return null;
+}
+function firstIncomplete(){return DEPARTMENTS.find(d=>!completed.has(d.id))||null;}
 function setZoneState(id,classes=[]){const z=document.getElementById('zone-'+id),r=document.getElementById('info-'+id);['active','completed'].forEach(c=>{z.classList.remove(c);r.classList.remove(c);});classes.forEach(c=>{z.classList.add(c);r.classList.add(c);});setMaskClass(id,'room',classes.join(' '));updateQuadrantOpenStates();}
 function refreshStates(){DEPARTMENTS.forEach(d=>{const cls=[];if(completed.has(d.id))cls.push('completed');if(activeDept&&activeDept.id===d.id)cls.push('active');setZoneState(d.id,cls);});}
 function updateQuadrantOpenStates(){const done={};GROUP_AREAS.forEach(a=>{const ids=DEPARTMENTS.filter(d=>d.group===a.group).map(d=>d.id);done[a.group]=ids.every(id=>completed.has(id));setMaskClass(a.group,'quadrant',done[a.group]?'open':'');});const all=GROUP_AREAS.every(a=>done[a.group]);scene.classList.toggle('all-complete',all);GROUP_AREAS.forEach(a=>{const s=document.getElementById('mask-quadrant-'+a.group);if(s){const scale=all?GROUP_AREAS_ALL_COMPLETE_SCALE:(done[a.group]?GROUP_AREAS_COMPLETED_SCALE:{rx:1,ry:1});s.setAttribute('rx',(a.rx*scale.rx).toFixed(2));s.setAttribute('ry',(a.ry*scale.ry).toFixed(2));}});}
@@ -302,7 +315,7 @@ function completeActiveKeepPanel(){
   refreshStates();
   return finished;
 }
-function stopPlayAllButton(){playAllMode=false;playAllBtn.classList.remove('is-playing');playAllBtn.textContent='▶ Play All';}
+function stopPlayAllButton(){playAllMode=false;playAllBtn.classList.remove('is-playing');playAllBtn.innerHTML='<span class="playall-text">Start Tour</span>';}
 function activateDepartment(d){activeDept=d;showPanel(d);playAudio(d);refreshStates();}
 function onBuildingClick(d){
   if(playAllMode)stopPlayAllButton();
@@ -318,18 +331,22 @@ audioEl.addEventListener('ended',()=>{
   activeDept=null;
   if(playAllMode&&finished){
     refreshStates();
-    const i=deptIndex(finished);
-    if(i<DEPARTMENTS.length-1){
+    const next=nextIncompleteAfter(finished);
+    if(next){
       setTimeout(()=>{
-        if(playAllMode)activateDepartment(DEPARTMENTS[i+1]);
+        if(playAllMode)activateDepartment(next);
       },AUTOPLAY_GAP_MS);
     }else{stopPlayAllButton();showPanel(finished);refreshStates();}
   }else if(finished){showPanel(finished);refreshStates();}
 });
 playAllBtn.addEventListener('click',()=>{
   if(playAllMode){stopPlayAllButton();audioEl.pause();return;}
-  playAllMode=true;playAllBtn.classList.add('is-playing');playAllBtn.textContent='❚❚ Playing';
-  const start=activeDept||DEPARTMENTS.find(d=>!completed.has(d.id))||DEPARTMENTS[0];
+  const start=firstIncomplete()||DEPARTMENTS[0];
+  if(activeDept&&activeDept.id!==start.id){
+    audioEl.pause();
+    activeDept=null;
+  }
+  playAllMode=true;playAllBtn.classList.add('is-playing');playAllBtn.innerHTML='<span class="playall-text">Playing</span>';
   activateDepartment(start);
 });
 prevBtn.addEventListener('click',()=>{const focus=activeDept||panelDept;const i=deptIndex(focus);if(i>0){if(activeDept){completed.add(activeDept.id);audioEl.pause();activeDept=null;}activateDepartment(DEPARTMENTS[i-1]);}});
